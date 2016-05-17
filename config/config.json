@@ -1,0 +1,35 @@
+ {
+   "aws-development": {
+    "username": "ssc_wef_help_now",
+    "password": "w3fpr0j3ct",
+    "database": "helpnow",
+    "host": "helpnowinstance.cujribxbqha0.us-west-2.rds.amazonaws.com",
+    "dialect": "mysql",
+    "define": {
+      "timestamps":false,
+      "freezeTableName":true
+    }
+  },
+  "local-dev": {
+    "username": "root",
+    "password": "root",
+    "database": "helpnow",
+    "host": "localhost",
+    "dialect": "mysql",
+    "define": {
+      "timestamps":false,
+      "freezeTableName":true
+    }
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "define": {
+      "timestamps":false,
+      "freezeTableName":true
+    }
+  }
+}
