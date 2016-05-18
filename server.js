@@ -13,8 +13,8 @@ var fs = require('fs');
 var app = express();
 
 var environment = process.env.ENVIRONMENT || 'qas';
-var port = process.env.PORT || 80;
-var ssl_port = process.env.SSL_PORT || 443;
+var port = process.env.PORT || 8080;
+var ssl_port = process.env.SSL_PORT || 8443;
 var enable_redirect = process.env.ENABLE_REDIRECT || true;
 
 app.use(bodyParser.urlencoded({extended:true}));
@@ -39,7 +39,7 @@ var socialMedia = require('./modules/socialmedia');
 var schedule = require('node-schedule');
 
 var rule = new schedule.RecurrenceRule();
-rule.minute = 29;
+rule.minute = 30;
 
 var twitterSearch = schedule.scheduleJob(rule, function() {
     socialMedia.setupTwitter();
